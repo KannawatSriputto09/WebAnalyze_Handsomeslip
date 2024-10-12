@@ -4,31 +4,43 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\css\style.css">
     <title>Document</title>
 </head>
 <body>
-    <form action="" method="POST" style="transition: .5s;">
+    <form action="" method="POST">
         <li>
-            <p>วิชา1:</p>
-            <p><input type="text" name="subject1" placeholder="ชื่อวิชา" /></p>
-            <p><input type="text" name="cal1" placeholder="คะแนน" /></p>
+            <div class="subject1">
+                <p>วิชาที่ 1:</p>
+                <p><input type="text" name="subject1" placeholder="ชื่อวิชา" /></p>
+                <p><input type="text" name="cal1" placeholder="คะแนน" /></p>
+            </div>
         </li>
         <li>
-            <p>วิชา2:</p>
-            <p><input type="text" name="subject2" placeholder="ชื่อวิชา" /></p>
-            <p><input type="text" name="cal2" placeholder="คะแนน" /></p>
+            <div>
+                <p>วิชาที่ 2:</p>
+                <p><input type="text" name="subject2" placeholder="ชื่อวิชา" /></p>
+                <p><input type="text" name="cal2" placeholder="คะแนน" /></p>
+            </div>
         </li>
         <li>
-            <p>วิชา3:</p>
-            <p><input type="text" name="subject3" placeholder="ชื่อวิชา" /></p>
-            <p><input type="text" name="cal3" placeholder="คะแนน" /></p>
+            <div>
+                <p>วิชาที่ 3:</p>
+                <p><input type="text" name="subject3" placeholder="ชื่อวิชา" /></p>
+                <p><input type="text" name="cal3" placeholder="คะแนน" /></p>
+            </div>
         </li>
         <li>
-            <p>วิชา4:</p>
-            <p><input type="text" name="subject4" placeholder="ชื่อวิชา"/></p>
-            <p><input type="text" name="cal4" placeholder="คะแนน" /></p>
+            <div>
+                <p>วิชาที่ 4:</p>
+                <p><input type="text" name="subject4" placeholder="ชื่อวิชา"/></p>
+                <p><input type="text" name="cal4" placeholder="คะแนน" /></p>
+            </div>
         </li>
         <p><input type="submit" value="Submit"/></p>
+        <p><input type="reset" value="Reset"></p>
+        
+        <img src={{plot_url}}> 
     </form>
 </body>
 </html>
