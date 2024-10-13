@@ -16,16 +16,16 @@ def index():
                 break
             else:
                 lis_s.append(first_subject)
-                lis_t.append(first_cals)
+                lis_t.append(int(first_cals))
                 count = count + 1
-            # sec_subject = request.form.get("subject2")
-            # th_subject = request.form.get("subject3")
-            # fo_subject = request.form.get("subject4")
-        plt.xlabel("total")
-        plt.ylabel("subject")
-        plt.plot(first_subject, first_cals)
-        plt.savefig('/static/img/new_plot.png')
-        return render_template('index.html', name = 'new_plot', url ='/static/img/new_plot.png')
+        # lis_t.append(100)
+        # lis_s.append("")
+        plt.xlabel("subject")
+        plt.ylabel("total")
+        plt.ylim(0, 100)
+        plt.bar(lis_s,lis_t)
+        plt.savefig('static/new_plot.png')
+        return render_template('index.html', plot_url ='static/new_plot.png')
     else:
         return render_template('index.html')
 
