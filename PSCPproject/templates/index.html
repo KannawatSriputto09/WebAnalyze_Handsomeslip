@@ -6,41 +6,120 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="static\css\style.css">
     <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        nav {
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            position: sticky;
+            top: 0;
+            -index: 1000;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #34495e;
+        }
+        
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        
+        section {
+            padding: 30px;
+            max-width: 100px;
+            margin: 0 auto;
+        }
+    </style>
 </head>
 <body>
-    <form action="" method="POST">
-        <li>
-            <div class="subject1">
+    <form action="" method="POST" style="transition: .5s;">
+        <nav>
+            <div class="logo">Handsomeslip</div>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section>
+            <div>
                 <p>วิชาที่ 1:</p>
                 <p><input type="text" name="subject1" placeholder="ชื่อวิชา" /></p>
                 <p><input type="text" name="cal1" placeholder="คะแนน" /></p>
             </div>
-        </li>
-        <li>
+        </section>
+
+        <section>
             <div>
                 <p>วิชาที่ 2:</p>
                 <p><input type="text" name="subject2" placeholder="ชื่อวิชา" /></p>
                 <p><input type="text" name="cal2" placeholder="คะแนน" /></p>
             </div>
-        </li>
-        <li>
+        </section>
+
+        <section>
             <div>
                 <p>วิชาที่ 3:</p>
                 <p><input type="text" name="subject3" placeholder="ชื่อวิชา" /></p>
                 <p><input type="text" name="cal3" placeholder="คะแนน" /></p>
             </div>
-        </li>
-        <li>
+        </section>
+
+        <section>
             <div>
                 <p>วิชาที่ 4:</p>
                 <p><input type="text" name="subject4" placeholder="ชื่อวิชา"/></p>
                 <p><input type="text" name="cal4" placeholder="คะแนน" /></p>
             </div>
-        </li>
+        </section>
+
         <p><input type="submit" value="Submit"/></p>
         <p><input type="reset" value="Reset"></p>
         
-        <img src={{plot_url}}> 
+        <img src={{plot_url}}>
+
+        <footer>
+            <p>Peemnatachai เป็นคนหล่อนะครับ !!เรื่องจริง!!</p>
+         </footer>
     </form>
 </body>
 </html>
