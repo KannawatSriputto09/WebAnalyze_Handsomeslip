@@ -88,6 +88,55 @@
             flex-direction: column;
         }
 
+        .team-container {
+            display: flex;
+            justify-content: space-between;
+            padding: 0 20px;
+            flex-wrap: wrap;
+            
+        }
+
+        .team-member {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 22%;
+            margin-bottom: 20px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 65%;
+            background-size: cover;
+        }
+
+        .team-member h3 {
+            margin: 16px 0 8px 0;
+        }
+
+        .team-member p {
+          color: #777;
+          padding: 0 16px;
+        }
+
+        .team-member button {
+            background-color: #f1f1f1;
+            border: none;
+            color: #333;
+            padding: 14px 16px;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 0 0 10px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .team-member button:hover {
+            background-color: #ddd;
+        }
+
         footer {
             background-color: #2c3e50;
             color: white;
@@ -107,7 +156,7 @@
             <ul>
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
-              <li><a href="https://github.com/KannawatSriputto09" target="_blank">Contact</a></li>
+              <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
 
@@ -117,7 +166,7 @@
             </div>
         </section>
 
-        <section id = "about" class="top">
+        <section id = "about" class="top"> 
             <div>
                 <h1>About</h1>
                 <p></p>
@@ -170,8 +219,50 @@
             <img src={{plot_url}}>
         </section>
 
+        <div id="contact" class="team-container">
+            <div class="team-member">
+              <img src="image/whai.jpg" alt="Whai">
+              <div class="team-info">
+                <h3>Whai</h3>
+                <p>เขียนไรดี</p>
+                <a href="https://github.com/KannawatSriputto09" target="_blank"><button>Contact</button></a>
+                #แก้ไขลิ้งไปหา github
+              </div>
+            </div>
+        
+            <div class="team-member">
+              <img src="image/peem.jpg" alt="Peem">
+              <div class="team-info">
+                <h3>Peem</h3>
+                <p>เขียนไรดี</p>
+                <a href="https://github.com/67070046-Natachai" target="_blank"><button>Contact</button></a>
+                #แก้ไขลิ้งไปหา github
+              </div>
+            </div>
+        
+            <div class="team-member">
+              <img src="image/golf.jpg" alt="Golf">
+              <div class="team-info">
+                <h3>Golf</h3>
+                <p>เขียนไรดี</p>
+                <a href="https://github.com/PDR160S" target="_blank"><button>Contact</button></a>
+                #แก้ไขลิ้งไปหา github
+              </div>
+            </div>
+        
+            <div class="team-member">
+              <img src="image/Keng.jpg" alt="Keng">
+              <div class="team-info">
+                <h3>Keng</h3>
+                <p>เขียนไรดี</p>
+                <a href="https://github.com/Neti67070093" target="_blank"><button>Contact</button></a>
+                #แก้ไขลิ้งไปหา github
+              </div>
+            </div>
+        </div>
+
         <footer>
-            <p>Peemnatachai เป็นคนหล่อนะครับ !!เรื่องจริง!!</p>
+            <p>Hands</p>
          </footer>
     </form>
 </body>
