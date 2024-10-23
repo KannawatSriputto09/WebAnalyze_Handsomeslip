@@ -8,6 +8,7 @@
     <title>Document</title>
 
     <style>
+        
         * {
             margin: 0;
             padding: 0;
@@ -146,13 +147,23 @@
             bottom: 0;
             width: 100%;
         }
-        
+        #thai-time {
+            font-size: 1.5rem;
+            font-weight: bold;
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
         .image-container {
         display: flex;
         justify-content: center;
         align-items: center;
         height: 100%;
-}
+        }
+        
 
     </style>
 </head>
@@ -160,6 +171,7 @@
     <form action="" method="POST" style="transition: .5s;">
         <nav>
             <div class="logo">Handsomeslip</div>
+            <div id="thai-time"></div>
             <ul>
               <li><a href="#home">Home</a></li>
               <li><a href="#about">About</a></li>
@@ -265,7 +277,16 @@
               </div>
             </div>
         </div>
-
+        <script>
+            function updateThaiTime() {
+                const options = { timeZone: 'Asia/Bangkok', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+                const formatter = new Intl.DateTimeFormat([], options);
+                const timeString = formatter.format(new Date());
+                document.getElementById('thai-time').innerText = `${timeString}`;
+            }
+            setInterval(updateThaiTime, 1000);
+            updateThaiTime();
+        </script>
         <footer>
             <p>Handsomeslip</p>
          </footer>
