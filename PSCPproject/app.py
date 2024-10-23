@@ -3,8 +3,12 @@ import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 
-@app.route('/', methods = ["POST", "GET"])
+@app.route('/')
 def index():
+    return render_template('index.html')
+
+@app.route('/main', methods = ["POST", "GET"])
+def main():
     lis_s = []
     lis_t = []
     count = 1
@@ -18,21 +22,14 @@ def index():
                 lis_s.append(first_subject)
                 lis_t.append(int(first_cals))
                 count = count + 1
-        # lis_t.append(100)
-        # lis_s.append("")
         plt.xlabel("subject")
         plt.ylabel("total")
         plt.ylim(0, 100)
         plt.bar(lis_s,lis_t)
         plt.savefig('static/new_plot.png')
-        return render_template('index.html', plot_url ='static/new_plot.png')
+        return render_template('main.html', plot_url ='static/new_plot.png')
     else:
-        return render_template('index.html')
-
-
-# @app.route('/register')
-# def register():
-#     return render_template('register.html')
+        return render_template('main.html')
 
 # @app.route('/login')
 # def login():

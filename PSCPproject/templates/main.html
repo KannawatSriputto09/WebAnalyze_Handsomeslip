@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static\css\style.css">
+    <title>Document</title>
+
+    <style>
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        nav {
+            background-color: #2c3e50;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 50px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin-left: 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            font-size: 1rem;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background-color: #34495e;
+        }
+
+        .top{
+            margin: 4;
+            padding: 100;
+        }
+
+        .top{
+            padding: 50px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section {
+            padding: 20px;
+            max-width: 100px;
+            margin: 0 auto;
+        }
+
+        .box{
+            width: 400px;
+            background-color: white;
+            border: 2px solid #2c3e50;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 80px;
+            max-width: 1200px;
+            
+        }
+
+        .boxx{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 80vh;
+            flex-direction: column;
+        }
+
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 15%;
+
+            
+        }
+
+        .team-member {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            width: 22%;
+            margin-bottom: 20px;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .team-member img {
+            width: 100%;
+            height: 65%;
+            background-size: cover;
+        }
+
+        .team-member h3 {
+            margin: 16px 0 8px 0;
+        }
+
+        .team-member p {
+          color: #777;
+          padding: 0 16px;
+        }
+
+        .team-member button {
+            background-color: #f1f1f1;
+            border: none;
+            color: #333;
+            padding: 14px 16px;
+            text-align: center;
+            cursor: pointer;
+            width: 100%;
+            border-radius: 0 0 10px 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .team-member button:hover {
+            background-color: #ddd;
+        }
+
+        footer {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            display: flex;
+            height: 5vh;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        #thai-time {
+            font-size: 1.5rem;
+            font-weight: bold;
+            position: fixed;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        }
+
+        .team-info a {
+            width: 100%;
+            height: 100%;
+            margin-left: -20px;
+            padding: 14px 100% 14px 50%;
+            /* background-color: red; */
+        }
+        
+
+    </style>
+</head>
+<body>
+    <form action="" method="POST" style="transition: .5s;">
+        <nav>
+            <div class="logo">Handsomeslip</div>
+            <div id="thai-time"></div>
+            <ul>
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <section id = "home" class="top">
+            <div>
+                <h1>สวัสดีด้วยนะครับ</h1>
+            </div>
+        </section>
+
+        <section id = "about" class="top"> 
+            <div>
+                <h1>About</h1>
+                <p></p>
+                <p>พวกเราสร้างเว็บนี้มาเพื่อคนที่ต้องการทราบว่า คะแนนของเราอยู่ในช่วงในและเราควรจะถอนวิชานี้ไหม </p>
+            </div>
+        </section>
+
+        <div class="boxx">
+            <div class = "box">
+                <section>
+                    <div>
+                        <p>วิชาที่ 1:</p>
+                        <p><input type="text" name="subject1" placeholder="ชื่อวิชา" /></p>
+                        <p><input type="text" name="cal1" placeholder="คะแนน" /></p>
+                    </div>
+                </section>
+
+                <section>
+                    <div>
+                        <p>วิชาที่ 2:</p>
+                        <p><input type="text" name="subject2" placeholder="ชื่อวิชา" /></p>
+                        <p><input type="text" name="cal2" placeholder="คะแนน" /></p>
+                    </div>
+                </section>
+
+                <section>
+                    <div>
+                        <p>วิชาที่ 3:</p>
+                        <p><input type="text" name="subject3" placeholder="ชื่อวิชา" /></p>
+                        <p><input type="text" name="cal3" placeholder="คะแนน" /></p>
+                    </div>
+                </section>
+
+                <section>
+                    <div>
+                        <p>วิชาที่ 4:</p>
+                        <p><input type="text" name="subject4" placeholder="ชื่อวิชา"/></p>
+                        <p><input type="text" name="cal4" placeholder="คะแนน" /></p>
+                    </div>
+                </section>
+
+                <section>
+                    <p><input type="submit" value="Submit"/></p>
+                    <p><input type="reset" value="Reset"></p>
+                </section>
+            </div>
+        </div>
+
+        <section>
+            <div class="image-container">
+                <img src="{{plot_url}}" alt="Plot">
+            </div>
+        </section>
+
+        <div id="contact" class="team-container">
+            <div class="team-member">
+              <img src="/static/image/whai.jpg" alt="Whai">
+              <div class="team-info">
+                <h3>Whai</h3>
+                <p>Kannawat</p>
+                    <button><a href="https://github.com/KannawatSriputto09" target="_blank">Contact</a></button>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <img src="/static/image/peem.jpg" alt="Peem">
+              <div class="team-info">
+                <h3>Peem</h3>
+                <p>Natachai</p>
+                    <button><a href="https://github.com/67070046-Natachai" target="_blank">Contact</a></button>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <img src="/static/image/462554873_872053887978377_5078070492231550562_n.jpg" alt="Golf">
+              <div class="team-info">
+                <h3>Golf</h3>
+                <p>Teerut</p>
+                    <button><a href="https://github.com/PDR160S" target="_blank">Contact</a></button>
+              </div>
+            </div>
+
+            <div class="team-member">
+              <img src="/static/image/Keng.jpg" alt="Keng">
+              <div class="team-info">
+                <h3>Keng</h3>
+                <p>Neti</p>
+                    <button><a href="https://github.com/Neti67070093" target="_blank">Contact</a></button>
+              </div>
+            </div>
+        </div>
+        <script>
+            function updateThaiTime() {
+                const options = { timeZone: 'Asia/Bangkok', hour: '2-digit', minute: '2-digit', second: '2-digit', hour12: false };
+                const formatter = new Intl.DateTimeFormat([], options);
+                const timeString = formatter.format(new Date());
+                document.getElementById('thai-time').innerText = `${timeString}`;
+            }
+            setInterval(updateThaiTime, 1000);
+            updateThaiTime();
+        </script>
+        <footer>
+            <p>Handsomeslip</p>
+         </footer>
+    </form>
+</body>
+</html>
