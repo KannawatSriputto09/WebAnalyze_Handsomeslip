@@ -146,6 +146,13 @@
             bottom: 0;
             width: 100%;
         }
+        
+        .image-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+}
 
     </style>
 </head>
@@ -216,7 +223,9 @@
         </div>
 
         <section>
-            <img src={{plot_url}}>
+            <div class="image-container">
+                <img src="{{plot_url}}" alt="Plot">
+            </div>
         </section>
 
         <div id="contact" class="team-container">
