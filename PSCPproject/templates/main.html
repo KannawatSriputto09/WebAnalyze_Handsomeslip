@@ -166,6 +166,7 @@
         justify-content: center;
         align-items: center;
         height: 100%;
+        width: 100%;
         }
 
         .team-info a {
@@ -173,20 +174,27 @@
             height: 100%;
             margin-left: -20px;
             padding: 14px 100% 14px 50%;
-            /* background-color: red; */
         }
 
         .img_it {
-            width: 5%;
+            width: 40%;
             height: 65%;
             background-size: cover;
         }
-        
+
+        .img_s{
+            width: 100%;
+            align-items: center;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
 
     </style>
 </head>
 <body>
     <form action="" method="POST" style="transition: .5s;">
+    
         <nav>
             <div class="logo">Handsomeslip</div>
             <div id="thai-time"></div>
@@ -198,9 +206,8 @@
         </nav>
 
         <section id = "home" class="top">
-            <div>
-
-                <h1><img src="/static/image/it-kmitl.png" class = "img_it">สวัสดีด้วยนะครับ</h1>
+            <div class = "img_s">
+                <h1><img src="/static/image/it-kmitl.png" class = "img_it"></h1>
             </div>
         </section>
 
