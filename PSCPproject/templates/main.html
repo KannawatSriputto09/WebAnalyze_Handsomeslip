@@ -73,17 +73,15 @@
             background-color: #34495e;
         }
 
-        .triangle {
-            position: absolute;
-            border-left: 20px solid transparent;
-            border-right: 20px solid transparent;
-            border-bottom: 20px solid rgb(244, 26, 26);
-            transition: left 0.3s ease;
-            top: 78%;
-            left: 10%;
-            display: flex;
-            /*ฝากแก้ให้หน่อยนะ*/
+        .triangle { 
+    position: absolute;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid rgb(244, 26, 26);
+    transition: left 0.3s ease;
+    top: 60px; 
         }
+
 
         .top{
             margin: 4;
@@ -384,25 +382,29 @@
             updateThaiTime();
         </script>
 
-        <script>//สามเหลี่ยม//
-            const triangle = document.getElementById('triangle');
+    <script> //3เหลี่ยม
+    const triangle = document.getElementById('triangle');
+    const aboutLink = document.querySelector('nav ul li:nth-child(1) a');
+    const contactLink = document.querySelector('nav ul li:nth-child(2) a');
 
-            function updateTriangle() {
-                const aboutSection = document.getElementById('about');
-                const contactSection = document.getElementById('contact');
+    function updateTriangle() {
+        const aboutSection = document.getElementById('about');
+        const contactSection = document.getElementById('contact');
 
-                const aboutOffset = aboutSection.getBoundingClientRect();
-                const contactOffset = contactSection.getBoundingClientRect();
+        const aboutOffset = aboutSection.getBoundingClientRect();
+        const contactOffset = contactSection.getBoundingClientRect();
 
-                if (aboutOffset.top <= window.innerHeight && aboutOffset.bottom >= 0) {
-                    triangle.style.left = 'calc(50% - 50px)'; // ปรับตำแหน่งของสามเหลี่ยมสำหรับ About
-                } else if (contactOffset.top <= window.innerHeight && contactOffset.bottom >= 0) {
-                    triangle.style.left = 'calc(50% + 50px)'; // ปรับตำแหน่งของสามเหลี่ยมสำหรับ Contact
-                }
-            }
+        if (aboutOffset.top <= window.innerHeight && aboutOffset.bottom >= 0) {
+            const aboutPosition = aboutLink.getBoundingClientRect().left;
+            triangle.style.left = `${aboutPosition + aboutLink.offsetWidth / 2 - 20}px`;
+        } else if (contactOffset.top <= window.innerHeight && contactOffset.bottom >= 0) {
+            const contactPosition = contactLink.getBoundingClientRect().left;
+            triangle.style.left = `${contactPosition + contactLink.offsetWidth / 2 - 20}px`;
+        }
+    }
 
-            window.addEventListener('scroll', updateTriangle);
-            updateTriangle();
+    window.addEventListener('scroll', updateTriangle);
+    updateTriangle();
 </script>
 
         <footer>
