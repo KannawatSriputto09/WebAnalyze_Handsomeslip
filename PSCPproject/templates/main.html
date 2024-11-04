@@ -15,6 +15,10 @@
             font-family: 'Chakra Petch', sans-serif;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         .top p {
             font-size: 30px;
             flex: 1;
@@ -157,8 +161,6 @@
             flex-wrap: wrap;
             justify-content: space-between;
             padding: 15%;
-
-            
         }
 
         .team-member {
@@ -268,14 +270,14 @@
             </ul>
         </nav>
 
-        <section class="top">
+        <section id = "about" class="top">
             <div class = "img_s">
                 <h1><img src="/static/image/it-kmitl.png" class = "img_it"></h1>
             </div>
         </section>
 
         
-        <section id = "about" class="top"> 
+        <section class="top"> 
             <div>
                 <h1>About</h1>
                 <p>     กลุ่มคณะผู้จัดทำ ได้ตระหนักถึงปัญหาว่าเพื่อนหลายคนไม่สามารถตัดสินใจในการเลือกที่จะถอนรายวิชาหรือเลือกที่จะอ่านหนังสือ
@@ -293,13 +295,14 @@
                         <p>ชื่อวิชา:</p>
                         <input type="text" name="subject[]" placeholder="ชื่อวิชา" required />
                         <p>คะแนน:</p>
-                        <input type="number" name="cal[]" placeholder="คะแนน" min="0" max="100" required />
+                        <input type="text" name="cal[]" placeholder="คะแนน" min="0" max="100" required />
                     </div>
                 </section>
         
                 <section>
-                    <button type="button" onclick="addSubject()">เพิ่มรายวิชา</button>
+                    <button type="text" onclick="addSubject()">เพิ่มรายวิชา</button>
                     <input type="submit" value="Submit" />
+                    <input type="reset" value="Reset"/> 
                 </section>
             </div>
         </div>
@@ -390,7 +393,7 @@
             <p>ชื่อวิชา:</p>
             <input type="text" name="subject[]" placeholder="ชื่อวิชา" required />
             <p>คะแนน:</p>
-            <input type="number" name="cal[]" placeholder="คะแนน" min="0" max="100" required />
+            <input type="text" name="cal[]" placeholder="คะแนน" min="0" max="100" required />
         `;
         subjectContainer.appendChild(newEntry);
     }

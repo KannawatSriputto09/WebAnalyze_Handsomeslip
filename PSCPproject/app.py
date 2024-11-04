@@ -2,6 +2,9 @@ from flask import Flask, render_template ,request
 import matplotlib.pyplot as plt
 import os
 app = Flask(__name__)
+
+marked_dates = ["2024-11-01", "2024-11-05", "2024-11-10"]
+
 @app.route('/')
 def index():
     return render_template('index.html')
@@ -21,8 +24,5 @@ def main():
         plt.bar(lis_s, lis_t)
         os.makedirs('static', exist_ok=True)
         plt.savefig('static/new_plot.png')
-        return render_template('main.html', plot_url='static/new_plot.png')
-    return render_template('main.html')
-# @app.route('/login')
-# def login():
-#     return render_template('login.html')
+        return render_template('main.html', plot_url='static/new_plot.png',marked_dates=marked_dates)
+    return render_template('main.html', marked_dates=marked_dates)
