@@ -287,42 +287,19 @@
         </section>
 
         <div class="boxx">
-            <div class = "box">
-                <section>
-                    <div>
-                        <p>วิชาที่ 1:</p>
-                        <p><input type="text" name="subject1" placeholder="ชื่อวิชา" /></p>
-                        <p><input type="text" name="cal1" placeholder="คะแนน" /></p>
+            <div class="box">
+                <section id="subject-container">
+                    <div class="subject-entry">
+                        <p>ชื่อวิชา:</p>
+                        <input type="text" name="subject[]" placeholder="ชื่อวิชา" required />
+                        <p>คะแนน:</p>
+                        <input type="number" name="cal[]" placeholder="คะแนน" min="0" max="100" required />
                     </div>
                 </section>
-
+        
                 <section>
-                    <div>
-                        <p>วิชาที่ 2:</p>
-                        <p><input type="text" name="subject2" placeholder="ชื่อวิชา" /></p>
-                        <p><input type="text" name="cal2" placeholder="คะแนน" /></p>
-                    </div>
-                </section>
-
-                <section>
-                    <div>
-                        <p>วิชาที่ 3:</p>
-                        <p><input type="text" name="subject3" placeholder="ชื่อวิชา" /></p>
-                        <p><input type="text" name="cal3" placeholder="คะแนน" /></p>
-                    </div>
-                </section>
-
-                <section>
-                    <div>
-                        <p>วิชาที่ 4:</p>
-                        <p><input type="text" name="subject4" placeholder="ชื่อวิชา"/></p>
-                        <p><input type="text" name="cal4" placeholder="คะแนน" /></p>
-                    </div>
-                </section>
-
-                <section>
-                    <p><input type="submit" value="Submit"/></p>
-                    <p><input type="reset" value="Reset"></p>
+                    <button type="button" onclick="addSubject()">เพิ่มรายวิชา</button>
+                    <input type="submit" value="Submit" />
                 </section>
             </div>
         </div>
@@ -405,8 +382,19 @@
 
     window.addEventListener('scroll', updateTriangle);
     updateTriangle();
+    function addSubject() {
+        const subjectContainer = document.getElementById('subject-container');
+        const newEntry = document.createElement('div');
+        newEntry.classList.add('subject-entry');
+        newEntry.innerHTML = `
+            <p>ชื่อวิชา:</p>
+            <input type="text" name="subject[]" placeholder="ชื่อวิชา" required />
+            <p>คะแนน:</p>
+            <input type="number" name="cal[]" placeholder="คะแนน" min="0" max="100" required />
+        `;
+        subjectContainer.appendChild(newEntry);
+    }
 </script>
-
         <footer>
             <p>Handsomeslip</p>
          </footer>
