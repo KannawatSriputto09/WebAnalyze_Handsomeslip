@@ -278,6 +278,27 @@
         .add-button:hover {
             background-color: #34495e;
         }
+    .subject-entry{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .box input[type="text"] {
+            width: 190%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
+
+        .box input[type="texts"] {
+            width: 80%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            margin-top: 5px;
+        }
     </style>
 </head>
 <body >
@@ -315,14 +336,16 @@
             <div class="box">
                 <section id="subject-container">
                     <div class="subject-entry">
-                        
+                    <ul>
                         <p>ชื่อวิชา:</p>
                         <input type="text" name="subject[]" placeholder="ชื่อวิชา" required />
-                
+                    </ul>
+                    <ul>
                         <p>คะแนน:</p>
-                        <input type="text" name="cal[]" placeholder="คะแนน" min="0" max="100" required />
+                        <input type="texts" name="cal[]" placeholder="คะแนน" min="0" max="100" required />
+                    </ul>
                     
-                    </div>
+                </div>
                 </section>
         
                 <section style="display: flex; gap: 5vh;">
@@ -416,10 +439,14 @@
         const newEntry = document.createElement('div');
         newEntry.classList.add('subject-entry');
         newEntry.innerHTML = `
+        <ul>
             <p>ชื่อวิชา:</p>
             <input type="text" name="subject[]" placeholder="ชื่อวิชา" required />
+        </ul>
+        <ul>
             <p>คะแนน:</p>
-            <input type="text" name="cal[]" placeholder="คะแนน" min="0" max="100" required />
+            <input type="texts" name="cal[]" placeholder="คะแนน" min="0" max="100" required />
+        </ul>
         `;
         subjectContainer.appendChild(newEntry);
     }
