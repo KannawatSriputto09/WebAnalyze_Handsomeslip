@@ -16,6 +16,12 @@ def main():
             lis_t = [int(cal) for cal in lis_t if cal.isdigit() and 0 <= int(cal) <= 100]
         except ValueError:
             return "กรุณากรอกคะแนนเป็นตัวเลขในช่วง 0-100", 400
+        list_name = []
+        lis_t_f = []
+        for i, score in enumerate(lis_t):
+            if score <= 49:
+                list_name.append(lis_s[i])
+                lis_t_f.append(score)
         plt.clf()
         plt.xlabel("Subject")
         plt.ylabel("Total")
