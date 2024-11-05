@@ -29,5 +29,5 @@ def main():
         plt.bar(lis_s, lis_t)
         os.makedirs('static', exist_ok=True)
         plt.savefig('static/new_plot.png')
-        return render_template('main.html', plot_url='static/new_plot.png')
+        return render_template('main.html', plot_url='static/new_plot.png', list_name = list_name)
     return render_template('main.html')

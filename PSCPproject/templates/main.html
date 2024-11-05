@@ -328,9 +328,15 @@
             </div>
         </div>
 
-        <section>
+        <section id="total-container">
             <div class="image-container">
                 <img src="{{plot_url}}" alt="Plot">
+                <div class="alltotal" style="display: flex; flex-direction: column;">
+                    <p >รายวิชาที่มีความเสี่ยง</p>
+                    {% for item in list_name %}
+                        <ul>{{ item }}</ul>
+                    {% endfor %}
+                </div>
             </div>
         </section>
 
