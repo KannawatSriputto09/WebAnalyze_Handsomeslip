@@ -275,6 +275,15 @@
         .add-button:hover {
             background-color: #34495e;
         }
+
+        .fail{
+            color: red;
+            margin-bottom: 5px;
+        }
+
+        .f{
+            margin-bottom: 30px;
+        }
     </style>
 </head>
 <body >
@@ -333,9 +342,10 @@
             <div class="image-container">
                 <img src="{{plot_url}}" alt="Plot">
                 <div class="alltotal" style="display: flex; flex-direction: column;">
-                    <p >รายวิชาที่มีความเสี่ยง</p>
+                    
+                    <p class="f" >รายวิชาที่มีความเสี่ยง</p>
                     {% for item in list_name %}
-                        <ul>{{ item }}</ul>
+                        <ul class="fail">{{ item }}</ul>
                     {% endfor %}
                 </div>
             </div>
