@@ -1,5 +1,7 @@
 from flask import Flask, render_template ,request
 import matplotlib.pyplot as plt
+import matplotlib
+matplotlib.use('Agg')
 import os
 app = Flask(__name__)
 
@@ -12,6 +14,7 @@ def main():
     lis_s = request.form.getlist('subject[]')
     lis_t = request.form.getlist('cal[]')
     if request.method == "POST":
+        plt.clf()
         try:
             lis_t = [int(cal) for cal in lis_t if cal.isdigit() and 0 <= int(cal) <= 50]
         except ValueError:
@@ -38,4 +41,7 @@ def main():
         os.makedirs('static', exist_ok=True)
         plt.savefig('static/new_plot.png')
         return render_template('main.html', plot_url='static/new_plot.png', list_name = list_name)
-    return render_template('main.html')
+    return render_template('main.html',plot_url=None)
+
+if __name__ == '__main__':
+    app.run(debug=True)
