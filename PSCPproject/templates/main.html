@@ -283,7 +283,36 @@
 
         .f{
             margin-bottom: 30px;
+            font-weight: bold;
         }
+
+        .risk-box-container {
+            display: flex;
+            align-items: center;
+            margin-left: 10px;
+            margin-bottom: 20px;
+        }
+
+        .risk-box {
+            width: 10px;
+            height: 10px;
+            border-radius: 1px;
+            margin-right: 10px;
+        }
+
+        .red-box {
+           background-color: red;
+        }
+
+        .orange-box {
+            background-color: orange;
+        }
+
+        .box-label {
+            color: #333;
+            font-size: 1rem;
+        }
+
     </style>
 </head>
 <body >
@@ -342,9 +371,19 @@
                 <img src="{{plot_url}}" alt="Plot">
                 <div class="alltotal" style="display: flex; flex-direction: column;">
                     
-                    <p class="f" >รายวิชาที่มีความเสี่ยง</p>
+                    <p class="f" >รายวิชาที่มีความเสี่ยง
+                        <div class="risk-box-container">
+                            <div class="risk-box red-box"></div>
+                            <p class="box-label">สูงสุด</p>
+                        </div>
+                        <div class="risk-box-container">
+                            <div class="risk-box orange-box"></div>
+                            <p class="box-label">ต่ำ</p>
+                        </div>
+                    </p>
+
                     {% for item in list_name %}
-                        <ul class="fail">{{ item }}</ul>
+                        <li class="fail">{{ item }}</li>
                     {% endfor %}
                 </div>
             </div>
